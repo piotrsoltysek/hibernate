@@ -1,15 +1,19 @@
 package pl.camp.it.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity
+@Entity(name = "tcustomer")
 public class Customer {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(nullable = false)
     private String name;
+    @Column(nullable = false)
     private String surname;
+    @Column(unique = true, nullable = false)
     private long pesel;
+
 
     public int getId() {
         return id;
@@ -41,5 +45,15 @@ public class Customer {
 
     public void setPesel(long pesel) {
         this.pesel = pesel;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", pesel=" + pesel +
+                '}';
     }
 }
