@@ -47,6 +47,8 @@ public class App {
 
         System.out.println(getAllCustomers());
 
+        //test clone
+
 
 
     }
