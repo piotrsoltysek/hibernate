@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-public class RandomDataService implements IRandomDataService {
+public class FakerDataService implements IRandomDataService {
 
     @Override
     public String generateCity() {
@@ -33,10 +33,9 @@ public class RandomDataService implements IRandomDataService {
 
     @Override
     public String generateProductName() {
-    List<String> names = Arrays.asList("Woda", "Wino", "Kiełbasa", "Piwo", "Salceson", "Bułka", "Czipsy", "Cola");
+        List<String> names = Arrays.asList("Woda", "Wino", "Kiełbasa", "Piwo", "Salceson", "Bułka", "Czipsy", "Cola");
         return names.get(new Random().nextInt(names.size()));
     }
-
 
     @Override
     public double generateProductPrice() {

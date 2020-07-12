@@ -5,9 +5,10 @@ import org.hibernate.query.Query;
 import pl.camp.it.App;
 import pl.camp.it.model.Product;
 
-public class ProductDAO {
+public class ProductDAO implements  IProductDAO {
 
-    public static Product getProductById(int id) {
+    @Override
+    public Product getProductById(int id) {
         Session session = App.sessionFactory.openSession();
         Query<Product> query = session.createQuery("FROM pl.camp.it.model.Product WHERE id = :identyfikator");
         query.setParameter("identyfikator", id);

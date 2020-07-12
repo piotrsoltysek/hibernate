@@ -5,13 +5,12 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import pl.camp.it.App;
 import pl.camp.it.model.Customer;
-
 import java.util.List;
 
-public class CustomerDAO {
+public class CustomerDAO implements ICustomerDAO {
 
-
-    public static void saveCustomerToDataBase(Customer customer) {
+    @Override
+    public void saveCustomerToDataBase(Customer customer) {
         Session session = App.sessionFactory.openSession();
 
         Transaction tx = null;
@@ -30,7 +29,8 @@ public class CustomerDAO {
         }
     }
 
-    public static void deleteCustomer(Customer customer) {
+    @Override
+    public void deleteCustomer(Customer customer) {
         Session session = App.sessionFactory.openSession();
 
         Transaction tx = null;
@@ -48,7 +48,8 @@ public class CustomerDAO {
         }
     }
 
-    public static Customer getCustomerById(int id) {
+    @Override
+    public Customer getCustomerById(int id) {
         Session session = App.sessionFactory.openSession();
         Query<Customer> query = session.createQuery("FROM pl.camp.it.model.Customer WHERE id = " + id);
         Customer customer = query.getSingleResult();
@@ -56,14 +57,12 @@ public class CustomerDAO {
         return customer;
     }
 
-    public static List<Customer> getAllCustomers() {
+    @Override
+    public List<Customer> getAllCustomers() {
         Session session = App.sessionFactory.openSession();
         Query<Customer> query = session.createQuery("FROM pl.camp.it.model.Customer");
         List<Customer> customerList = query.getResultList();
         session.close();
         return customerList;
     }
-
-
-
 }

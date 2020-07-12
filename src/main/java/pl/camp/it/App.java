@@ -15,6 +15,9 @@ public class App {
     public static SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 
     public static void main(String[] args) {
+
+
+        /*
         System.out.println("Hibernate !!");
 
         Customer customer = new Customer();
@@ -58,6 +61,8 @@ public class App {
         System.out.println(customer2);
 
         System.out.println(ProductDAO.getProductById(1));
+
+         */
 
     }
 }

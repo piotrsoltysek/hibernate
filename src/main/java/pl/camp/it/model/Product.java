@@ -46,8 +46,6 @@ public class Product {
         this.customers = customers;
     }
 
-
-
     @Override
     public String toString() {
         return "Product{" +
