@@ -32,12 +32,13 @@
 
         <!-- Usuwa całą bazę danych i tworzy nowe tabele (strukturę danych) -->
         <property name="hbm2ddl.auto">
-            create
+            update
         </property>
 
         <!-- Podaje klasy modelowe -->
         <mapping class="pl.camp.it.model.Customer"/>
         <mapping class="pl.camp.it.model.Address"/>
+        <!-- <mapping resource="Address.hbm.xml"/> -->
         <mapping class="pl.camp.it.model.Invoice"/>
         <mapping class="pl.camp.it.model.Product"/>
 
