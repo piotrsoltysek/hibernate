@@ -37,6 +37,9 @@
 
         <!-- Podaje klasy modelowe -->
         <mapping class="pl.camp.it.model.Customer"/>
+        <mapping class="pl.camp.it.model.Address"/>
+        <mapping class="pl.camp.it.model.Invoice"/>
+        <mapping class="pl.camp.it.model.Product"/>
 
     </session-factory>
 
