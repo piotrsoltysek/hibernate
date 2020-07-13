@@ -1,5 +1,15 @@
-pl\camp\it\App.class
-pl\camp\it\model\Product.class
+pl\camp\it\services\FakerDataService.class
+pl\camp\it\dao\IProductDAO.class
+pl\camp\it\gui\GUI.class
+pl\camp\it\services\ICustomerService.class
+pl\camp\it\services\RandomDataService.class
 pl\camp\it\model\Customer.class
 pl\camp\it\model\Address.class
+pl\camp\it\dao\CustomerDAO.class
+pl\camp\it\dao\ProductDAO.class
 pl\camp\it\model\Invoice.class
+pl\camp\it\App.class
+pl\camp\it\services\CustomerService.class
+pl\camp\it\model\Product.class
+pl\camp\it\dao\ICustomerDAO.class
+pl\camp\it\services\IRandomDataService.class
